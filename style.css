@@ -1,0 +1,430 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Geral */
+body {
+    background-color: #000;
+    height: 100vh;
+    
+}
+
+.interface {
+    max-width: 1280px;
+    padding: 40px 4%;
+}
+
+.flex {
+    display: flex;
+}
+
+.btnContato button {
+    padding: 10px 30px;
+    font-size: 18px;
+    font-family: "New Amsterdam", sans-serif;
+    background-color: #7CFC00;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover, form .btn-enviar input:hover  {
+    box-shadow: 0px 0px 8px #7efc00fd;
+    transform: scale(1.2);
+}
+
+.titulos {
+    text-align: center;
+    font-size: 28px;
+    color: #FFF;
+    font-family: "Nunito", sans-serif;
+}
+
+.titulos span {
+    color: #7CFC00;
+}
+
+/* Cabecalho */
+
+header {
+    padding: 10px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "New Amsterdam", sans-serif;
+}
+
+header a {
+    color: #777777;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menuDesktop a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav.menuDesktop ul li {
+    display: inline-block;
+    font-size: 22px;
+    padding: 0 20px;
+}
+
+/* Menu Mobile */
+
+.menu-mobile {
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 25px;
+    padding: 20px 4%;
+    display: block;
+
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #7CFC00;
+    color: #000;
+}
+
+.menu-mobile .btn-fecharMenu i {
+    color: #7CFC00;
+    font-size: 30px;
+}
+
+.btn-fecharMenu {
+    padding: 20px 4%;
+}
+
+.abreMenu i {
+    color: #7CFC00;
+    font-size: 50px;
+}
+
+.overlay-menu {
+    background-color: #00000071;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+.menu-mobile.abrir-Menu {
+    width: 60%;
+}
+
+.menu-mobile.abrir-Menu ~ .overlay-menu {
+    display: block;
+}
+/* Topo site */
+
+section .topo-site{
+    padding: 40px 4%;
+}
+
+section.topo-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-site .texto-topo h1{
+    color: #fff;
+    font-size: 40px;
+    font-family: "Nunito", sans-serif;
+    
+}
+
+.topo-site .texto-topo p {
+    color: #fff;
+    margin: 30px 0;
+    font-family: "Nunito", sans-serif;
+}
+
+.topo-site .imagem-profile img {
+    position: relative;
+    animation: flutuarImagem 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuarImagem {
+    0%{
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* Sobre */
+
+section .sobre-mim {
+    padding: 80px 4%;
+    margin-top: 90px;
+}
+
+.sobre-mim .texto-sobre {
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+}
+
+.sobre-mim .texto-sobre h2{
+    font-size: 40px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.sobre-mim .texto-sobre h2 span {
+    color: #7CFC00;
+    display: block;
+}
+
+.sobre-mim .texto-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+section.sobre-mim .flex {
+    align-items: center;
+    gap: 40px;
+}
+
+.socialbtns button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: #7CFC00;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: .2s;
+}
+
+/* Projetos */
+
+section.projetos{
+    padding: 100px 4%;
+    box-shadow: 0 0 40px 10px #ffffff41;
+    margin-top: 90px;
+}
+
+section.projetos .flex{
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+.imgProjetos {
+    position: relative;
+    width: 360px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #161616af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #FFF;
+    opacity: 0%;
+    transition: .2s;
+}
+
+.overlay:hover {
+    opacity: 100%;
+}
+/* formulario */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input, form textarea {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #353434c7;
+    outline: 0;
+    border: 0;
+    padding: 20px 15px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    resize: none;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 250px;
+    background-color: #7CFC00;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* Rodape */
+
+footer{
+    padding: 20px 4%;
+    box-shadow: 0 0 40px 10px #ffffff41;
+}
+
+footer .flex {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 10px;
+}
+
+footer .container p i {
+    color: #7CFC00;
+    font-size: 25px;
+}
+
+footer .container p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* responsividade */
+
+@media screen and (max-width: 1020px){
+    /* Geral */
+    .flex {
+        flex-direction: column;
+    }
+
+    /* Cabecalho */
+    .menuDesktop, .btnContato {
+        display: none;
+    }
+    
+    header nav ul li {
+        padding: 0 40px;
+    }
+
+    /* topo */
+
+    .interface {
+        max-width: 1280px;
+        padding: 10px 8%;
+    }
+
+    section.topo-site .flex {
+        gap: 40px;
+        flex-direction: column-reverse;
+    }
+
+    section.topo-site  {
+        padding: 20px 8%;
+    }
+
+    .topo-site h1 {
+        font-size: 30px';
+    }
+
+    .topo-site .imagem-profile img {
+        width: 100%;
+    }
+
+    /* sobre */
+
+    section .sobre-mim {
+        padding: 80px 8%;
+    }
+
+    .sobre-mim .texto-sobre h2{
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    .socialbtns  {
+        text-align: center;
+    }
+
+    .socialbtns button {
+        margin: 10px;
+    }
+
+    /* portifólio */
+
+    section.projetos{
+        padding: 80px 8%;
+    }
+
+    .imgProjetos {
+        width: 100%;
+        max-width: 360px;
+    }
+    
+    section.projetos .flex{
+        gap: 20px;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    footer .interface {
+        display: inline;
+    }
+
+}
